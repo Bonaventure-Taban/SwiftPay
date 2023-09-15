@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    display: flex;
+}
+
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background-color: #fff;
+}
+
+.sidebar li{
+    height: 45px;
+    margin: 10px 0 0 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li a{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: .5s;
+}
+
+.sidebar li a:hover{
+    background-color: #32be8f;
+}
+
+.sidebar li .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 20px;
+}
+.sidebar li .icon,
+.sidebar li .text{
+    color: #333;
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text{
+    color: #050505;
+}
+
+.header-text{
+    text-align: left;
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.sidebar .menubar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.bottom-content{
+    margin: 40px 0 0 0;
+}
+
+.mainContent{
+    position: relative;
+    background: #ACEB98;
+    width: 100%;
+    padding: 1rem;
+}
+
+.headerWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;  
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin: 1rem;
+}
+
+.cardContainer{
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 1rem;
+}
+
+.cardWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.balanceCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgb(229, 233, 233);
+    border-radius: 10px;
+    padding: 1.3rem;
+    width: 290px;
+    height: 150px;
+    transition: all .5s ease-in-out;
+}
+
+.balanceCard:hover{
+    transform: translateY(-5px);
+}
+
+.tabularWrapper{
+    background: #fff;
+    margin: 1rem 1rem;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.tableContainer{
+    width: 100%;
+    padding: 10px 0 0 0;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead{
+    background: #d0ece4;
+}
+
+th{
+    padding: 15px;
+    text-align: left;
+}
+
+tbody{
+    background: #f2f2f2;
+}
+
+td{
+    font-size: 14px;
+    padding: 15px;
+}
+
+tr:nth-child(even){
+    background: #fff;
+}
+
+
+#sendBody, #receiveBody, #depositBody{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#withdrawBody{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.sendContent{
+    width: 868px;
+    height: 500px;
+    background: #fff;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    display: flex;
+}
+
+.rev{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 200px;
+}
+
+.sendContent img{
+    width: 400px;
+    height: 450px;
+    margin-top: 40px;
+}
+
+.fields{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fields input{
+    width: 400px;
+    height: 42px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+.fields h3{
+    padding-bottom: 10px;
+}
+
+.receive{
+    margin: 20px;
+}
+
+button{
+    margin: 50px;
+    width: 100px;
+    height: 42px;
+    border-radius: 5px;
+    background: #fff;
+    color: #000;
+    border: 1px solid black;
+    transition: .5s ease-in-out;
+}
+
+button:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+#receiveBody img{
+    width: 400px;
+    height: 300px;
+}
+
+#receiveBody h3{
+    margin-top: 20px;
+}
+
+#receiveBody p{
+    color: gray;
+    margin-top: 70px;
+}
+
+.amount p{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}

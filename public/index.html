@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftPay - Your Trusted Financial Companion</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Web3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.5.2/web3.min.js"></script>
+
+    <!-- Ether -->
+    <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"></script>
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+</head>
+<body>
+      <!-- Header Section -->
+    <header id="header" class="header">  
+        <a href="/"><h1 class="logo animate__animated animate__bounce" >SwiftPay</h1></a>
+        <nav class="navbar">
+          <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="buttons">
+            <!-- <a class="btn login-btn" href="/login">Login</a> -->
+            <button id="signInButton" onclick="checkMetamask()" class="btn signup-btn">Sign In</button>
+            <div class="toggle-btn">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown-menu">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <!-- <li><a class="btn login-btn" href="/login">Login</a></li> -->
+          <button id="signInButton" onclick="checkMetamask()" class="btn signup-btn">Sign In</button>
+        </div>
+      </header> 
+
+      <main>
+        <!-- hero-section start-->
+      <section class="hero" id="hero">
+
+        <svg class="wave" width="100%" preserveAspectRatio="none" height="100%" id="svg" viewBox="0 0 1440 690" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#F78DA7"></stop><stop offset="95%" stop-color="#8ED1FC"></stop></linearGradient></defs><path d="M 0,700 C 0,700 0,350 0,350 C 136.13333333333333,401.73333333333335 272.26666666666665,453.46666666666664 437,425 C 601.7333333333333,396.53333333333336 795.0666666666666,287.8666666666667 967,262 C 1138.9333333333334,236.13333333333333 1289.4666666666667,293.06666666666666 1440,350 C 1440,350 1440,700 1440,700 Z" stroke="none" stroke-width="0" fill="#00d084" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg> 
+
+        <div class="wrapper">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h2>Welcome to SwiftPay - Your Trusted Financial Companion</h2>
+              <p>Experience secure and convenient digital financial services at your fingertips. Say goodbye to the hassles of traditional banking and embrace the future of digital finance with SwiftPay.</p>
+              <div class="btn-div">
+                <li><a class="btn signup-btn" href="/register">Get Started</a></li>
+                <li><a class="btn explore-btn" href="#features">Explore</a></li>
+              </div>
+            </div>
+            
+            <div class="hero-img">
+              <img src="mobile_pay.png" alt="A mobile illustration" class="animate__animated animate__fadeInRight">
+            </div> 
+          </div>
+        </div>
+          
+      </section>
+
+      <!-- hero section end -->
+
+
+      <!-- features section start-->
+
+      <section class="features" id="features">
+        
+        <div class="row">
+          <h1>Features</h1>
+        </div>
+
+        <div class="row">
+          <!-- column one -->
+          <div class="column">
+            <div class="card">
+              <div class="icon">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <h3>User Friendly</h3>
+              <p>Immerse yourself in an exceptional user experience with our user-friendly interface, designed to make your financial journey effortless and enjoyable.</p>
+            </div>
+          </div>
+
+
+          <!-- column two -->
+          <div class="column">
+            <div class="card">
+              <div class="icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <h3>Secure Transactions</h3>
+              <p>Experience peace of mind with robust security measures that safeguard your financial transactions and protect your sensitive information.</p>
+            </div>
+          </div>
+
+
+          <!-- column three -->
+          <div class="column">
+            <div class="card">
+              <div class="icon">
+                <i class="fa-solid fa-mobile"></i>
+              </div>
+              <h3>Mobile Accessibility</h3>
+              <p>Enables users to access and manage their accounts on-the-go through a mobile-responsive platform, ensuring convenience and flexibility.</p>
+            </div>
+          </div>
+
+          
+          <!-- column four -->
+          <div class="column">
+            <div class="card">
+              <div class="icon">
+                <i class="fa-solid fa-headset"></i>
+              </div>
+              <h3>24/7 Customer Support</h3>
+              <p>We understand the importance of reliable customer support, which is why we offer 24/7 assistance to address any queries or concerns you may have. </p>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+
+      <!-- features section end-->
+
+
+      <!-- how it works start -->
+      <section class="how-it-works" id="how-it-works">
+        <div class="title-text">
+          <h1>How It Works</h1>
+          <p>Discover the simple and efficient process of using SwiftPay for your financial needs.</p>
+        </div>
+
+        <div class="row">
+          <!-- column one -->
+          <div class="column">
+            <div class="card">
+              <div class="icon">
+                <i class="fa-solid fa-user-plus"></i>
+              </div>
+              <h3>Create an Account</h3>
+              <p>Sign up for SwiftPay by providing your details and creating a secure account. It's quick and easy!</p>
+            </div>
+          </div>
+
+
+          <!-- column two -->
+          <div class="column">
+            <div class="card">
+              <div class="icon">
+                <i class="fa-solid fa-money-bill"></i>
+              </div>
+              <h3>Add Funds</h3>
+              <p>Once your account is set up, you can easily add funds to your SwiftPay wallet using your preferred payment method.</p>
+            </div>
+          </div>
+
+
+          <!-- column three -->
+          <div class="column">
+            <div class="card">
+              <div class="icon">
+                <i class="fa-sharp fa-solid fa-money-bill-transfer"></i>
+              </div>
+              <h3>Make Payments</h3>
+              <p>With funds in your SwiftPay wallet, you can conveniently make payments online or in-store with just a few clicks.</p>
+            </div>
+          </div>
+      </section>
+      <!-- how it works end -->
+
+      <section class="about" id="about">
+        <div class="title-text">
+          <h1>About Us</h1>
+          <p>SwiftPay is a revolutionary digital financial platform that provides users with a seamless and secure way to manage their finances. With SwiftPay, you can experience the convenience of digital banking and enjoy a wide range of financial services right at your fingertips.</p>
+        </div>
+
+        <div class="row">
+          <!-- column one -->
+          <div class="column">
+            <div class="card">
+              <div class="icon">
+                <i class="fa-solid fa-book"></i>
+              </div>
+              <h3>Mission</h3>
+              <p>At SwiftPay, our mission is to empower individuals and businesses with innovative financial solutions that simplify their financial lives. We strive to create a user-friendly and inclusive platform that caters for the diverse needs of our users, ensuring a seamless and personalized experience.</p>
+            </div>
+          </div>
+
+
+          <!-- column two -->
+          <div class="column">
+            <div class="card">
+              <div class="icon">
+                <i class="fa-solid fa-earth-americas"></i>
+              </div>
+              <h3>Vision</h3>
+              <p>Our vision is to revolutionize the way people manage their finances by providing a convenient and secure digital banking experience. We aim to be the trusted financial companion for individuals and businesses, offering a wide range of services that enhance financial well-being.</p>
+            </div>
+          </div>
+
+
+          <!-- column three -->
+          <div class="column">
+            <div class="card">
+              <div class="icon">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <h3>Values</h3>
+              <p>
+                We prioritize the needs and satisfaction of our users, and provide solutions that address their financial challenges. We are committed to making a positive impact on society by promoting financial inclusion and supporting community initiatives.
+              </p>
+            </div>
+          </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="form">
+          <div class="contact-info">
+            <h3>Contact Us</h3>
+            <p>Have questions or need assistance? Reach out to us using the contact information below or fill out the form.</p>
+
+            <div class="detail">
+              <div>
+                <i class="fa-sharp fa-solid fa-map-location-dot"></i>
+                <p>123 SwiftPay Street</p>
+              </div>
+              <div>
+                <i class="fa-solid fa-envelope"></i>
+                <p>info@swiftpay.com</p>
+              </div>
+              <div>
+                <i class="fa-solid fa-phone"></i>
+                <p>+123 456 789</p>
+              </div>
+            </div>
+
+
+            <div class="social-media"> 
+              <p>Connect with us:</p>
+              <div class="social-icons">
+                <a href="#">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+  
+                <a href="#">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+  
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+  
+                <a href="#">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="contact-form">
+            <span class="circle one"></span>
+            <span class="circle two"></span>
+
+            <form action="index.html">
+              <h3 class="title">Send us a message</h3>
+              <div class="input-container">
+                <label for="name">Name</label>
+                <input type="text" name="name" class="input" id="name" placeholder="Name" required>
+              </div>
+
+              <div class="input-container">
+                <label for="email">Email</label>
+                <input type="email" name="email" class="input" id="email" placeholder="someone@gmail.com" required> 
+              </div>
+
+              <div class="input-container">
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" class="input" id="phone" placeholder="+233 000-111-1234" required>
+              </div>
+
+              <div class="input-container textarea">
+                <label for="message">Message</label>
+                <textarea name="message" class="input" id="message" placeholder="Enter your message" required></textarea>
+              </div>
+              <input type="submit" value="Send" class="submit-btn">
+            </form>
+          </div>
+        </div>
+      </section>
+      
+      </main>
+
+      
+      <script src="main.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.5.2/web3.min.js"></script>
+
+</body>
+</html>

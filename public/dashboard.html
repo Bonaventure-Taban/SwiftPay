@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SwiftPay</title>
+    <link rel="stylesheet" href="dashboard.css">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.6/web3.min.js"></script>
+ 
+</head>
+<body id="dashboard-body">
+    
+    <nav class="sidebar">
+        <header>
+            <div class="text header-text">
+                <h3 class="logo">SwiftPay</h3>
+            </div>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#dashboardSection">
+                            <box-icon type='solid' name='dashboard' class="icon"></box-icon>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#sendBody">
+                            <box-icon name='send' class="icon"></box-icon>
+                            <span class="text nav-text">Send</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#receiveBody">
+                            <i class="fa-solid fa-hand-holding-dollar icon"></i>
+                            <span class="text nav-text">Receive</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <box-icon name='refresh' class="icon"></box-icon>
+                            <span class="text nav-text">Swap</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <box-icon type='solid' name='coin-stack' class="icon"></box-icon>
+                            <span class="text nav-text">Stake</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#depositBody">
+                            <box-icon type='solid' name='wallet' class="icon"></box-icon>
+                            <span class="text nav-text">Deposit</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#withdrawBody">
+                            <box-icon name='money-withdraw' class="icon"></box-icon>
+                            <span class="text nav-text">Withdraw</span>
+                        </a>
+                    </li>
+
+                </ul>
+                
+            </div>
+             
+            <div class="bottom-content">
+                <li class="nav-link">
+                    <a href="#">
+                        <box-icon type='solid' name='user' class="icon"></box-icon>
+                        <span class="text nav-text">Profile</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="#">
+                        <box-icon name='log-out' class="icon"></box-icon>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <div class="mainContent">
+
+        <!-- Dashboard Section -->
+        <section id="dashboardSection">
+            <div class="headerWrapper">
+                <div class="header-title">
+                    <h3 id="welcomeMessage"></h3>
+                </div>
+            </div>
+    
+            <div class="cardContainer">
+                <div class="cardWrapper">
+                    <div class="balanceCard">
+                        <div class="cardHeader">
+                            <div class="amount">
+                                <span class="title">Balance</span>
+                                <p id="balance"></p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="balanceCard">
+                        <div class="cardHeader">
+                            <div class="amount">
+                                <span class="title">Amount Sent</span>
+                                <p id="amt_sent">100.00</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="balanceCard">
+                        <div class="cardHeader">
+                            <div class="amount">
+                                <span class="title">Amount Received</span>
+                                <p id="amt_received">00.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="tabularWrapper">
+                <h3 class="mainTitle">Transactions</h3>
+                <div class="tableContainer">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Transaction Hash</th>
+                                <th>Sender Address</th>
+                                <th>Receiver Address</th>
+                                <th>Amount</th>
+                                <th>TimeStamp</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>03042cf8100db3868188...</td>
+                                <td>0x52651c30832cfcdac8...</td>
+                                <td>0x999999cf1046e68e36...</td>
+                                <td>100.00</td>
+                                <td>09/14/2023 @ 3:40pm</td>
+                            </tr>
+                            <tr>
+                                <td>---</td>
+                                <td>---</td>
+                                <td>---</td>
+                                <td>---</td>
+                                <td>---</td>
+                            </tr>
+                            <tr>
+                                <td>---</td>
+                                <td>---</td>
+                                <td>---</td>
+                                <td>---</td>
+                                <td>---</td>
+                            </tr>
+                            <tr>
+                                <td>---</td>
+                                <td>---</td>
+                                <td>---</td>
+                                <td>---</td>
+                                <td>---</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Send Section -->
+        <section id="sendBody">
+            <div class="sendContent">
+                <img src="send_illustration.png" alt="mobile illustration">
+                <div class="fields">
+        
+                    <h1>Send</h1>
+        
+                   <div class="receive">
+                    <h3>To:</h3>
+                    <input type="text" class="input" id="recipientAddress" required placeholder="0xE1DAC592C6754F3E997C5AB2A66772D459925FA6">
+                   </div>
+        
+                   <div class="amount">
+                    <h3>Amount:</h3>
+                    <input type="text" class="input" id="send_amt" required>
+                   </div>
+        
+                   <button id="sendButton">Send</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Receive Secction -->
+        <section id="receiveBody">
+            <div class="sendContent">
+                <div class="rev">
+                    <img src="receive_illustration.jpg" alt="an illustration">
+                    <h4 id="add"></h4>
+                    <p>Please use your wallet address above to receive funds</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deposite Section -->
+        <section id="depositBody">
+            <div class="sendContent">
+                <img src="deposit_illustration.jpg" alt="mobile illustration">
+                <div class="fields">
+        
+                    <h1>Deposit</h1>
+        
+                   <div class="receive">
+                    <h3>Amount</h3>
+                    <input type="text" class="input" id = "amount" required >
+                   </div>
+        
+                   <button class="sendButton" id="deposit">Deposit</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Withdraw Section -->
+        <section id="withdrawBody">
+            <div class="sendContent">
+                <img src="withdraw_illustration.jpg" alt="mobile illustration">
+                <div class="fields">
+        
+                    <h1>Withdraw</h1>
+        
+                   <div class="receive">
+                    <h3>Amount</h3>
+                    <input type="text" class="input" id="amount" >
+                   </div>
+        
+                   <button class="sendButton" id="withdraw">Withdraw</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.6/web3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
